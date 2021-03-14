@@ -1,5 +1,5 @@
 # My Gatsby-Sanity Personal Portfolio
 
-Proyect deployed using [sanity.io](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-blog).
+Proyect developed using [sanity.io](https://www.sanity.io) & [gatsby](https://www.gatsbyjs.com/).
 
 ## What's inside

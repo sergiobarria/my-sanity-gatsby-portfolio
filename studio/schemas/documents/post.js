@@ -116,34 +116,37 @@ export default {
       ],
     },
   ],
-  preview: {
-    select: {
-      title: "title",
-      author: "author.name",
-      media: "mainImage",
-    },
-    prepare(selection) {
-      const { author } = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
-    },
-  },
   // preview: {
   //   select: {
   //     title: "title",
-  //     publishedAt: "publishedAt",
-  //     slug: "slug",
+  //     author: "author.name",
   //     media: "mainImage",
   //   },
-  //   prepare({ title = "No title", publishedAt, slug = {}, media }) {
-  //     const dateSegment = format(publishedAt, "YYYY/MM")
-  //     const path = `/${dateSegment}/${slug.current}/`
-  //     return {
-  //       title,
-  //       media,
-  //       subtitle: publishedAt ? path : "Missing publishing date",
-  //     }
+  //   prepare(selection) {
+  //     const { authors } = selection
+  //     return Object.assign({}, selection, {
+  //       subtitle: authors && `by ${authors}`,
+  //     })
   //   },
   // },
+  preview: {
+    select: {
+      title: "title",
+      publishedAt: "publishedAt",
+      slug: "slug",
+      media: "mainImage",
+      author: "author",
+    },
+    prepare({ title = "No title", publishedAt, slug = {}, media, author }) {
+      const dateSegment = format(publishedAt, "YYYY/MMM/DD")
+      const path = `/${dateSegment}/${slug.current}/`
+      const authorName = `Sergio Barria`
+      return {
+        title,
+        media,
+        subtitle: `${dateSegment}, by ${authorName}`,
+        // publishedAt ? path : "Missing publishing date"
+      }
+    },
+  },
 }
