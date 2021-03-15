@@ -8,11 +8,9 @@ interface Props {
 export default function Title({ title, color }: Props) {
   return (
     <div
-      className={`max-w-xs w-1/2 mx-auto text-4xl font-semibold transform my-gradient -skew-y-2 text-${
-        color ? color : ""
-      }`}
+      className={`max-w-xs w-1/2 mx-auto text-center text-4xl font-medium transform my-gradient -skew-y-2`}
     >
-      <h2>{title}</h2>
+      <h2 className={`text-${color ? color : ""}`}>{title}</h2>
     </div>
   );
 }

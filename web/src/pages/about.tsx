@@ -1,11 +1,45 @@
 import React from "react";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout/Layout";
+import Title from "../components/ui/Title";
 
-export default function About() {
+const BlockContent = require("@sanity/block-content-to-react");
+
+interface Props {
+  data: { allSanityAbout: { nodes: { title: string; _rawBody: [] }[] } };
+}
+
+const About = ({ data }: Props) => {
+  // const {} = data
+
+  // console.log(data.allSanityAbout.nodes[0]._rawBody);
+  const mainContent = data.allSanityAbout.nodes[0]._rawBody;
+
   return (
     <Layout>
-      <h3>This is the about page</h3>
+      <Title title="About me" color="white" />
+      <article className="mx-auto my-20 prose">
+        <BlockContent blocks={mainContent} />
+      </article>
     </Layout>
   );
-}
+};
+
+export default About;
+// body {
+//   children {
+//     text
+//   }
+// }
+
+export const query = graphql`
+  {
+    allSanityAbout {
+      nodes {
+        title
+        _rawBody
+      }
+    }
+  }
+`;

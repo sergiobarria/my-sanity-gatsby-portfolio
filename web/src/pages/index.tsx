@@ -12,8 +12,8 @@ type DataProps = {
   };
 };
 
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
-  console.log(data);
+const HomePage: React.FC<PageProps<DataProps>> = ({ data, path }) => {
+  // console.log(data);
 
   return (
     <Layout>
@@ -24,7 +24,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
   );
 };
 
-export default UsingTypescript;
+export default HomePage;
 
 export const query = graphql`
   query {
@@ -60,6 +60,7 @@ export const query = graphql`
         categories {
           title
         }
+        readTime
       }
     }
   }

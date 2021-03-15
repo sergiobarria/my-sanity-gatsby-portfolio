@@ -8,7 +8,7 @@ export default function Navbar() {
     <footer className="mt-10 tracking-widest text-center border-t border-gray-300 ">
       <div className="flex flex-col items-center justify-center">
         <SocialLinks />
-        <p className="font-normal md:text-lg">
+        <p className="text-sm">
           &copy; Copyright {new Date().getFullYear()}. All rights reserved.{" "}
           <br />
           Built with{" "}

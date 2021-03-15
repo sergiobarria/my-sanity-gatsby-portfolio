@@ -3,7 +3,13 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV || "development"}`,
 });
 
-const clientConfig = require("./client-config");
+// const clientConfig = require("./client-config");
+
+const sanityConfig = {
+  projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+  dataset: process.env.GATSBY_SANITY_DATASET,
+  useCdn: true, // false if you want to ensure fresh data
+};
 
 const isProd = process.env.NODE_ENV === "production";
 const isDev = process.env.NODE_ENV === "development";
@@ -41,10 +47,12 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        ...clientConfig.sanity,
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
+        useCdn: true, // false if you want to ensure fresh data
         token: process.env.SANITY_READ_TOKEN,
-        watchMode: isDev,
-        overlayDrafts: !isProd,
+        watchMode: true,
+        // overlayDrafts: !isProd,
       },
     },
     {
