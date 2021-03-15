@@ -1,7 +1,28 @@
+// Load variables from `.env` as soon as possible
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV || "development"}`,
+});
+
+const clientConfig = require("./client-config");
+
+const isProd = process.env.NODE_ENV === "production";
+const isDev = process.env.NODE_ENV === "development";
+
 module.exports = {
   siteMetadata: {
-    title: `Sergio's Personal Portfolio`,
-    description: `Web & mobile developer portfolio and blog. Sharing content on web and mobile development with JavaScript, React, Gatsby, Next js and much more`,
+    title: `Sergio M Barria Portfolio`,
+    description: `Personal site for Sergio M Barria, Web & mobile developer portfolio and blog. Sharing content on web and mobile development with JavaScript, React, Gatsby, Next js and much more`,
+    keywords: [
+      "Sergio M Barria",
+      "Sergio Barria",
+      "JavaScript",
+      "React",
+      "Web Development",
+      "Mobile Development",
+      "JAMStack",
+      "Next js",
+      "Gatsby js",
+    ],
     author: `Sergio Barria`,
   },
   plugins: [
@@ -15,6 +36,15 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        ...clientConfig.sanity,
+        token: process.env.SANITY_READ_TOKEN,
+        watchMode: isDev,
+        overlayDrafts: !isProd,
       },
     },
     {
@@ -34,4 +64,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

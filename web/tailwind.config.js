@@ -1,5 +1,5 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
-const colors = require("tailwindcss/colors")
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -19,10 +19,12 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       orange: colors.orange,
+      lightBlue: colors.lightBlue,
     },
     extend: {
       fontFamily: {
-        sans: ["Titillium Web", ...defaultTheme.fontFamily.sans],
+        sans: ["Poppins", "Titillium Web", ...defaultTheme.fontFamily.sans],
+        title: ["Acme", ...defaultTheme.fontFamily.sans],
       },
     },
   },
@@ -30,4 +32,4 @@ module.exports = {
     extend: {},
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
-}
+};

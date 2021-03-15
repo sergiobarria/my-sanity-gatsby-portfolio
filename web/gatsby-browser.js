@@ -5,6 +5,4 @@
  */
 
 // You can delete this file if you're not using it
-import "./src/styles/global.css"
-
-import "@fontsource/titillium-web" // Defaults to weight 400.
+import "./src/styles/global.css";

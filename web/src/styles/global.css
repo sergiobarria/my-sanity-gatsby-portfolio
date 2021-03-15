@@ -1,4 +1,47 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
 /* ./src/styles/global.css */
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-4xl text-gray-800 md:text-5xl lg:text-7xl;
+  }
+  h2 {
+    @apply text-3xl text-gray-800 md:text-4xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-2xl text-gray-800 md:text-3xl lg:text-4xl;
+  }
+  h4 {
+    @apply text-xl text-gray-800 md:text-2xl lg:text-3xl;
+  }
+  h5 {
+    @apply text-base text-gray-800 md:text-xl lg:text-2xl;
+  }
+  p {
+    @apply text-gray-800;
+  }
+
+  .my-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-purple-500;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* purgecss start ignore */
+html {
+  @apply antialiased;
+}
