@@ -50,9 +50,19 @@ module.exports = {
         projectId: process.env.GATSBY_SANITY_PROJECT_ID,
         dataset: process.env.GATSBY_SANITY_DATASET,
         useCdn: true, // false if you want to ensure fresh data
-        token: process.env.SANITY_READ_TOKEN,
+        // token: process.env.SANITY_READ_TOKEN,
         watchMode: true,
         // overlayDrafts: !isProd,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sanity-image",
+      options: {
+        // Sanity project info (required)
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
+        // fragmentTypeName: "SanityMainImage",
+        customImageTypes: ["mainImage"],
       },
     },
     {

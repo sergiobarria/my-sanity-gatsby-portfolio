@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function SocialLinks() {
@@ -18,7 +17,7 @@ export default function SocialLinks() {
     },
   ];
 
-  const styles: { [index: string]: {} } = {
+  const styles = {
     icon: "text-4xl transition-all duration-300 ease-linear cursor-pointer",
     instagram: "text-red-600 hover:text-red-800",
     github: "text-gray-700 hover:text-gray-900",
@@ -28,7 +27,6 @@ export default function SocialLinks() {
   return (
     <ul className="flex my-4">
       {socials.map((social, index) => {
-        const id = index;
         let icon;
         if (index === 0) {
           icon = <FaInstagram />;

@@ -3,11 +3,7 @@ import PropTypes from "prop-types";
 
 import SocialLinks from "../ui/SocialLinks";
 
-interface Props {
-  siteTitle: string;
-}
-
-const Header = ({ siteTitle }: Props) => {
+const Header = ({ siteTitle }) => {
   return (
     <div className="max-w-lg mx-auto my-20">
       <p className="mb-4 text-2xl font-semibold tracking-widest">

@@ -69,8 +69,18 @@ export default {
       title: "Body",
     },
     {
+      name: "keywords",
+      type: "array",
+      description: "Add keywords that describes your blog.",
+      of: [{ type: "string" }],
+      options: {
+        layout: "tags",
+      },
+    },
+    {
       name: "tags",
       type: "array",
+      description: "Add tags that describes your blog content.",
       of: [
         {
           type: "string",
@@ -82,6 +92,7 @@ export default {
     },
     {
       name: "readTime",
+      description: "Add the estimated read time.",
       title: "Read Time",
       type: "number",
     },

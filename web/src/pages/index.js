@@ -1,25 +1,22 @@
-// If you don't want to use TypeScript you can delete this file!
 import * as React from "react";
-import { PageProps, Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout/Layout";
 import Header from "../components/layout/Header";
-import SEO from "../components/seo";
+import PostsPreview from "../components/posts/PostPreview";
+// import SEO from "../components/seo";
 
-type DataProps = {
-  site: {
-    buildTime: string;
-  };
-};
-
-const HomePage: React.FC<PageProps<DataProps>> = ({ data, path }) => {
-  // console.log(data);
+const HomePage = ({ data }) => {
+  const posts = data.allSanityPost.nodes.map(post => ({
+    ...post,
+  }));
 
   return (
     <Layout>
       <header className="container">
         <Header />
       </header>
+      <PostsPreview posts={posts} />
     </Layout>
   );
 };
@@ -37,7 +34,6 @@ export const query = graphql`
         }
         excerpt {
           children {
-            marks
             text
           }
         }
@@ -47,9 +43,7 @@ export const query = graphql`
           alt
           caption
           asset {
-            fluid {
-              ...GatsbySanityImageFluid
-            }
+            gatsbyImageData
           }
         }
         authors {

@@ -6,11 +6,7 @@ import Title from "../components/ui/Title";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-interface Props {
-  data: { allSanityAbout: { nodes: { title: string; _rawBody: [] }[] } };
-}
-
-const About = ({ data }: Props) => {
+const About = ({ data }) => {
   // const {} = data
 
   // console.log(data.allSanityAbout.nodes[0]._rawBody);
