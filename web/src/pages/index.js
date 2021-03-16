@@ -43,7 +43,7 @@ export const query = graphql`
           alt
           caption
           asset {
-            gatsbyImageData
+            gatsbyImageData(placeholder: BLURRED)
           }
         }
         authors {

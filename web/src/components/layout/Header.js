@@ -5,7 +5,7 @@ import SocialLinks from "../ui/SocialLinks";
 
 const Header = ({ siteTitle }) => {
   return (
-    <div className="max-w-lg mx-auto my-20">
+    <div className="max-w-lg mx-auto my-20 ">
       <p className="mb-4 text-2xl font-semibold tracking-widest">
         Hi, I'm Sergio!
       </p>

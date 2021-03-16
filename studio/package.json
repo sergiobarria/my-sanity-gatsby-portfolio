@@ -7,8 +7,9 @@
   "author": "sergiobarria <sergio.barria9210@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "dev": "sanity start",
+    "start": "sanity start"
   },
   "keywords": [
     "sanity"
