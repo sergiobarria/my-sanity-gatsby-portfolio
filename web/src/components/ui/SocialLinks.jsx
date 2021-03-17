@@ -31,13 +31,13 @@ export default function SocialLinks() {
     <ul className="flex my-4">
       {socials.map(social => {
         let icon;
-        if (social.id === 0) {
+        if (social.id === 1) {
           icon = <FaInstagram />;
         }
-        if (social.id === 1) {
+        if (social.id === 2) {
           icon = <FaGithub />;
         }
-        if (social.id === 2) {
+        if (social.id === 3) {
           icon = <FaTwitter />;
         }
         return (

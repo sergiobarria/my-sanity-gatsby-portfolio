@@ -1,8 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/Layout';
 import Header from '../components/layout/Header';
+import Services from '../components/layout/Services';
 import PostsPreview from '../components/posts/PostPreview';
 // import SEO from "../components/seo";
 
@@ -16,7 +17,8 @@ const HomePage = ({ data }) => {
       <header className="container">
         <Header />
       </header>
-      <PostsPreview posts={posts} />
+      <Services />
+      <PostsPreview posts={posts} showTitle />
     </Layout>
   );
 };

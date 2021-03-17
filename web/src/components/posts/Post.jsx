@@ -25,7 +25,7 @@ export default function Post(props) {
               objectFit="cover"
             />
           )}
-          <p className="absolute px-2 font-semibold prose-sm text-white rounded-full top-2 right-2 my-gradient">
+          <p className="absolute px-2 text-xs font-semibold text-white rounded-full top-2 right-2 my-gradient">
             {categories[0].title}
           </p>
         </div>

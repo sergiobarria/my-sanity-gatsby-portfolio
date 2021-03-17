@@ -40,8 +40,6 @@ export default function Navbar() {
       'mx-2 my-2 text-lg font-light px-3.5 hover:text-purple-500 transition duration-200',
     activeLink: 'text-white my-gradient inline-block transform -skew-y-3',
   };
-  // text-white bg-purple-700 inline-block transform -rotate-3
-  // border-b-4 border-purple-700
 
   return (
     <nav className="flex flex-col items-center mb-10">
@@ -65,6 +63,7 @@ export default function Navbar() {
           </Link>
         ))}
       </ul>
+      <hr className="w-full mt-4" />
     </nav>
   );
 }
