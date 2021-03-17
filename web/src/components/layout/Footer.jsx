@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import SocialLinks from "../ui/SocialLinks";
+import SocialLinks from '../ui/SocialLinks';
 
 export default function Navbar() {
   return (
@@ -8,9 +8,9 @@ export default function Navbar() {
       <div className="flex flex-col items-center justify-center">
         <SocialLinks />
         <p className="text-sm">
-          &copy; Copyright {new Date().getFullYear()}. All rights reserved.{" "}
+          &copy; Copyright {new Date().getFullYear()}. All rights reserved.{' '}
           <br />
-          Built with{" "}
+          Built with{' '}
           <span className="font-medium text-gradient my-gradient">
             <a
               href="https://www.gatsbyjs.com/"
@@ -19,8 +19,8 @@ export default function Navbar() {
             >
               Gatsby js
             </a>
-          </span>{" "}
-          and{" "}
+          </span>{' '}
+          and{' '}
           <span className="font-normal text-gradient my-gradient">
             <a
               href="https://www.sanity.io"
@@ -29,7 +29,7 @@ export default function Navbar() {
             >
               Sanity.io
             </a>
-          </span>{" "}
+          </span>{' '}
         </p>
       </div>
     </footer>

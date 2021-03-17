@@ -1,13 +1,14 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
+/* eslint-disable */
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      transparent: "transparent",
-      current: "currentColor",
+      transparent: 'transparent',
+      current: 'currentColor',
       black: colors.black,
       white: colors.white,
       gray: colors.trueGray,
@@ -23,13 +24,13 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Poppins", "Titillium Web", ...defaultTheme.fontFamily.sans],
-        title: ["Acme", ...defaultTheme.fontFamily.sans],
+        sans: ['Poppins', 'Titillium Web', ...defaultTheme.fontFamily.sans],
+        title: ['Acme', ...defaultTheme.fontFamily.sans],
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 };

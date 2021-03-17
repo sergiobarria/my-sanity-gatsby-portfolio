@@ -1,15 +1,13 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout/Layout";
-import Title from "../components/ui/Title";
+import Layout from '../components/layout/Layout';
+import Title from '../components/ui/Title';
 
-const BlockContent = require("@sanity/block-content-to-react");
+const BlockContent = require('@sanity/block-content-to-react');
 
 const About = ({ data }) => {
-  // const {} = data
-
-  // console.log(data.allSanityAbout.nodes[0]._rawBody);
+  // eslint-disable-next-line
   const mainContent = data.allSanityAbout.nodes[0]._rawBody;
 
   return (
@@ -23,11 +21,6 @@ const About = ({ data }) => {
 };
 
 export default About;
-// body {
-//   children {
-//     text
-//   }
-// }
 
 export const query = graphql`
   {

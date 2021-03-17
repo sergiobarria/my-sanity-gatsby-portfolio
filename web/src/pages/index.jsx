@@ -1,9 +1,9 @@
-import * as React from "react";
-import { graphql } from "gatsby";
+import * as React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout/Layout";
-import Header from "../components/layout/Header";
-import PostsPreview from "../components/posts/PostPreview";
+import Layout from '../components/layout/Layout';
+import Header from '../components/layout/Header';
+import PostsPreview from '../components/posts/PostPreview';
 // import SEO from "../components/seo";
 
 const HomePage = ({ data }) => {
