@@ -23,9 +23,7 @@
   },
   "homepage": "https://github.com/sergiobarria/my-sanity-gatsby-portfolio#readme",
   "devDependencies": {
+    "@sanity/cli": "^2.6.0",
     "lerna": "^4.0.0"
-  },
-  "dependencies": {
-    "gatsby-plugin-sitemap": "^3.1.0"
   }
 }
