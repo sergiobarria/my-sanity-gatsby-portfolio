@@ -38,7 +38,7 @@ const Project = props => {
         <div className="text-right">
           <a
             href={link}
-            className="font-semibold border-b border-yellow-400 animate-pulse my-gradient text-gradient"
+            className="font-semibold border-b border-blue-400 animate-pulse my-gradient text-gradient"
             target="_blank"
             rel="noopener noreferrer"
           >

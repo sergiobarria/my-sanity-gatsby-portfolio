@@ -25,7 +25,7 @@ const Service = ({ id, title, text }) => {
         }`}
       />
       <div className="relative h-full p-4 text-center bg-white rounded-md shadow-md lg:px-6">
-        <div className="w-8 mx-auto mb-4 text-4xl text-yellow-500">{icon}</div>
+        <div className="w-8 mx-auto mb-4 text-4xl text-blue-500">{icon}</div>
         <h3 className="font-semibold lg:text-2xl">{title}</h3>
         <hr className="w-5/6 mx-auto my-2" />
         <p className="leading-7 text-center">{text}</p>

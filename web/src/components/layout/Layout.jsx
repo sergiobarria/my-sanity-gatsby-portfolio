@@ -13,7 +13,7 @@ import Footer from './Footer';
 const Layout = ({ children }) => (
   <>
     {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
-    <div className="min-h-screen pt-4 overflow-hidden bg-gray-50">
+    <div className="min-h-screen overflow-hidden bg-gray-50">
       <div className="container min-h-screen p-4 mx-auto">
         <Navbar />
         <main>{children}</main>
