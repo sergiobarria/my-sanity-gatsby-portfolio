@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
   <>
     {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
     <div className="min-h-screen pt-4 bg-gray-50">
-      <div className="container p-4 mx-auto">
+      <div className="container min-h-screen p-4 mx-auto">
         <Navbar />
         <main>{children}</main>
         <Footer />

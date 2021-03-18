@@ -23,11 +23,11 @@ export default function Navbar() {
       text: 'Projects',
       url: '/projects',
     },
-    // {
-    //   id: 5,
-    //   text: 'Resources',
-    //   url: '/resources',
-    // },
+    {
+      id: 5,
+      text: 'Resources',
+      url: '/resources',
+    },
     {
       id: 6,
       text: 'Contact',

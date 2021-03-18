@@ -11,6 +11,7 @@ import category from "./documents/category"
 import post from "./documents/post"
 import projects from "./documents/projects"
 import siteSettings from "./documents/siteSettings"
+import resources from "./documents/resources"
 
 // Object types
 import bodyPortableText from "./objects/bodyPortableText"
@@ -39,6 +40,7 @@ export default createSchema({
     bioPortableText,
     excerptPortableText,
     projects,
+    resources,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ]),

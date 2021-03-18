@@ -19,15 +19,14 @@ export default function Services() {
     },
     {
       id: 3,
-      title: 'Mobile App Development',
+      title: 'Mobile Development',
       text:
         "I'll will help you develop the logic needed to put your application idea online and it will be available for both, iOS and Android systems.",
     },
   ];
 
-  // md:grid md:grid-cols-2 md:gap-8 lg:gap-10 lg:grid-cols-3 md:auto-rows-auto
   return (
-    <section>
+    <section className="my-24">
       <Title title="What I do" />
       <div className="max-w-screen-lg mx-auto mt-8 md:grid md:grid-cols-2 md:gap-8">
         {services.map(service => {
