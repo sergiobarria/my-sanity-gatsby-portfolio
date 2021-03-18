@@ -3,7 +3,7 @@ import * as React from 'react';
 import SocialLinks from '../ui/SocialLinks';
 
 const Header = () => (
-  <div className="max-w-lg mx-auto my-20 ">
+  <div className="max-w-xl mx-auto my-20 ">
     <p className="mb-4 text-2xl font-semibold tracking-widest">
       Hi, I&#39;m Sergio!
     </p>

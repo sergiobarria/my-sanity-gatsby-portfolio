@@ -29,7 +29,7 @@ export default function Services() {
   return (
     <section>
       <Title title="What I do" />
-      <div className="max-w-screen-xl mx-auto mt-8 md:grid md:grid-cols-2 md:gap-8">
+      <div className="max-w-screen-lg mx-auto mt-8 md:grid md:grid-cols-2 md:gap-8">
         {services.map(service => {
           const { id, title, text } = service;
 

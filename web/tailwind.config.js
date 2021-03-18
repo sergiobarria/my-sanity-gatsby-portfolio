@@ -23,6 +23,48 @@ module.exports = {
       lightBlue: colors.lightBlue,
     },
     extend: {
+      typography: {
+        xl: {
+          css: {
+            h2: {
+              marginTop: '1.5rem',
+              marginBottom: '1.5rem',
+            },
+            h3: {
+              letterSpacing: '0',
+            },
+            p: {
+              fontSize: '1.25rem',
+              marginTop: '0',
+              marginBottom: '0',
+              paddingTop: '0.75rem',
+              paddingBottom: '0.75rem',
+            },
+            blockquote: {
+              fontSize: '1.5rem',
+            },
+          },
+        },
+        DEFAULT: {
+          css: {
+            a: {
+              color: '#A855F7',
+            },
+            p: {
+              marginTop: '0',
+              marginBottom: '0',
+            },
+            h1: {
+              marginBottom: '1rem',
+            },
+            blockquote: {
+              fontFamily: 'Caveat',
+              fontSize: '1.5rem',
+              borderLeftColor: '#A855F7',
+            },
+          },
+        },
+      },
       fontFamily: {
         sans: ['Poppins', 'Titillium Web', ...defaultTheme.fontFamily.sans],
         title: ['Acme', ...defaultTheme.fontFamily.sans],

@@ -16,8 +16,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Sergio M Barria Portfolio`,
-    description: `Personal site for Sergio M Barria, Web & mobile developer portfolio and blog. Sharing content on web and mobile development with JavaScript, React, Gatsby, Next js and much more`,
+    title: `Sergio M. Barria Portfolio`,
+    description: `Personal site for Sergio M. Barria, Web & mobile developer portfolio and blog. Sharing content on web and mobile development with JavaScript, React, Gatsby, Next js, Flutter, React Native`,
     keywords: [
       'Sergio M Barria',
       'Sergio Barria',
@@ -28,8 +28,12 @@ module.exports = {
       'JAMStack',
       'Next js',
       'Gatsby js',
+      'Flutter',
+      'React Native',
     ],
+    url: 'https://www.sergiobarria.com',
     author: `Sergio Barria`,
+    twitterUsername: '@thecodingscript',
   },
   plugins: [
     `gatsby-plugin-image`,

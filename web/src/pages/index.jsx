@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 import Header from '../components/layout/Header';
 import Services from '../components/layout/Services';
 import PostsPreview from '../components/posts/PostPreview';
-// import SEO from "../components/seo";
+import SEO from '../components/analytics/SEO';
 
 const HomePage = ({ data }) => {
   const posts = data.allSanityPost.nodes.map(post => ({
@@ -13,13 +13,16 @@ const HomePage = ({ data }) => {
   }));
 
   return (
-    <Layout>
-      <header className="container">
-        <Header />
-      </header>
-      <Services />
-      <PostsPreview posts={posts} showTitle />
-    </Layout>
+    <>
+      <SEO title="Home" />
+      <Layout>
+        <header className="container">
+          <Header />
+        </header>
+        <Services />
+        <PostsPreview posts={posts} showTitle />
+      </Layout>
+    </>
   );
 };
 

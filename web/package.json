@@ -13,6 +13,7 @@
     "dotenv": "^8.2.0",
     "gatsby": "^3.0.4",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
+    "gatsby-plugin-google-gtag": "^3.1.0",
     "gatsby-plugin-image": "^1.0.1",
     "gatsby-plugin-manifest": "^3.0.0",
     "gatsby-plugin-offline": "^4.0.0",

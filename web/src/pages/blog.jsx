@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import Title from '../components/ui/Title';
 import PostsPreview from '../components/posts/PostPreview';
+import SEO from '../components/analytics/SEO';
 
 export default function Blog({ data }) {
   const posts = data.allSanityPost.nodes.map(post => ({
@@ -11,12 +12,15 @@ export default function Blog({ data }) {
   }));
 
   return (
-    <Layout>
-      <section>
-        <Title title="All Blog Posts" />
-        <PostsPreview posts={posts} />
-      </section>
-    </Layout>
+    <>
+      <SEO title="Blog" />
+      <Layout>
+        <section>
+          <Title title="All Blog Posts" />
+          <PostsPreview posts={posts} />
+        </section>
+      </Layout>
+    </>
   );
 }
 
