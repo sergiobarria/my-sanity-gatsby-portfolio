@@ -52,7 +52,7 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: '#F59E0B',
+              color: '#3B82F6',
             },
             p: {
               marginTop: '0',
@@ -64,10 +64,10 @@ module.exports = {
             blockquote: {
               fontFamily: 'Caveat',
               fontSize: '1.5rem',
-              borderLeftColor: '#F59E0B',
+              borderLeftColor: '#3B82F6',
             },
             code: {
-              color: '#D97706',
+              color: '#3B82F6',
               background: '#E5E5E5',
               fontSize: '1rem',
               fontWeight: '300',
