@@ -23,7 +23,7 @@ const Project = props => {
           <h5 className="text-xl font-semibold">{title}</h5>
         </div>
 
-        <div className="flex justify-around py-2 text-center">
+        <div className="flex justify-around py-2 text-center opacity-70">
           {tags &&
             tags.map((tag, index) => (
               <p
@@ -38,7 +38,7 @@ const Project = props => {
         <div className="text-right">
           <a
             href={link}
-            className="font-semibold border-b border-purple-400 animate-pulse my-gradient text-gradient"
+            className="font-semibold border-b border-yellow-400 animate-pulse my-gradient text-gradient"
             target="_blank"
             rel="noopener noreferrer"
           >

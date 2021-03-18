@@ -31,7 +31,7 @@ module.exports = {
       'Flutter',
       'React Native',
     ],
-    url: 'https://www.sergiobarria.com',
+    siteUrl: 'https://www.sergiobarria.com',
     author: `Sergio Barria`,
     twitterUsername: '@thecodingscript',
   },
@@ -88,7 +88,13 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000,
       },
     },
 

@@ -28,7 +28,7 @@
   }
 
   .my-gradient {
-    @apply bg-gradient-to-r from-blue-500 to-purple-500;
+    @apply bg-gradient-to-r from-yellow-500 to-orange-500;
   }
 }
 

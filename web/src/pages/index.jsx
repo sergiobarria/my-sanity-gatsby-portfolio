@@ -20,7 +20,7 @@ const HomePage = ({ data }) => {
           <Header />
         </header>
         <Services />
-        <PostsPreview posts={posts} showTitle />
+        <PostsPreview posts={posts} showTitle showBtn />
       </Layout>
     </>
   );

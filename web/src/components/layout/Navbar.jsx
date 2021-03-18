@@ -23,11 +23,11 @@ export default function Navbar() {
       text: 'Projects',
       url: '/projects',
     },
-    {
-      id: 5,
-      text: 'Resources',
-      url: '/resources',
-    },
+    // {
+    //   id: 5,
+    //   text: 'Resources',
+    //   url: '/resources',
+    // },
     {
       id: 6,
       text: 'Contact',
@@ -37,7 +37,7 @@ export default function Navbar() {
 
   const styles = {
     link:
-      'mx-2 my-2 text-lg font-light px-3.5 hover:text-purple-500 transition duration-200',
+      'mx-2 my-2 text-lg font-light px-3.5 hover:text-yellow-500 transition duration-200',
     activeLink: 'text-white my-gradient inline-block transform -skew-y-3',
   };
 

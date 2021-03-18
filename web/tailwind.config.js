@@ -15,6 +15,7 @@ module.exports = {
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,
+      lime: colors.lime,
       blue: colors.blue,
       indigo: colors.indigo,
       purple: colors.violet,
@@ -43,12 +44,15 @@ module.exports = {
             blockquote: {
               fontSize: '1.5rem',
             },
+            code: {
+              fontSize: '1.5rem',
+            },
           },
         },
         DEFAULT: {
           css: {
             a: {
-              color: '#A855F7',
+              color: '#F59E0B',
             },
             p: {
               marginTop: '0',
@@ -60,7 +64,22 @@ module.exports = {
             blockquote: {
               fontFamily: 'Caveat',
               fontSize: '1.5rem',
-              borderLeftColor: '#A855F7',
+              borderLeftColor: '#F59E0B',
+            },
+            code: {
+              color: '#D97706',
+              background: '#E5E5E5',
+              fontSize: '1rem',
+              fontWeight: '300',
+              padding: '0 0.4rem',
+              borderRadius: '0.2rem',
+              fontFamily: ['Monaco', 'Consolas', 'Courier New', 'monospace'],
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
             },
           },
         },
