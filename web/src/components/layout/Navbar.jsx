@@ -53,14 +53,15 @@ export default function Navbar() {
       </h2>
       <ul className="flex flex-wrap items-center justify-center leading-10">
         {links.map(link => (
-          <Link
-            key={link.id}
-            to={link.url}
-            className={styles.link}
-            activeClassName={styles.activeLink}
-          >
-            {link.text}
-          </Link>
+          <li key={link.id}>
+            <Link
+              to={link.url}
+              className={styles.link}
+              activeClassName={styles.activeLink}
+            >
+              {link.text}
+            </Link>
+          </li>
         ))}
       </ul>
       <hr className="w-full mt-4" />
