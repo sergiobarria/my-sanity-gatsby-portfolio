@@ -71,7 +71,7 @@ const BlogPostTemplate = ({ data }) => {
           </article>
 
           <div className="flex items-center justify-center w-8/12 mx-auto mt-12 md:w-3/12">
-            <Button text="More Posts" url="/blog/" />
+            <Button text="More Posts" url="/blog" />
           </div>
         </section>
       </Layout>

@@ -18,7 +18,7 @@ const PostPreview = ({ posts, showTitle, showBtn }) => (
     )}
     {showBtn && (
       <div className="flex justify-center">
-        <Button url="/blog" text="See More" transparent />
+        <Button url="/blog" text="Check more posts here &rarr;" transparent />
       </div>
     )}
   </section>

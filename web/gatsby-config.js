@@ -41,6 +41,7 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    'gatsby-plugin-robots-txt',
     `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-eslint',
@@ -121,6 +122,21 @@ module.exports = {
           // respectDNT: true,
           // Avoids sending pageview hits from custom paths
           // exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.sergiobarria.com',
+        sitemap: 'https://www.sergiobarria.com/sitemap.xml',
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
         },
       },
     },

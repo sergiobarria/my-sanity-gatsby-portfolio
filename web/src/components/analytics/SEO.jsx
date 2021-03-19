@@ -11,7 +11,7 @@ const SEO = ({ description, lang, meta, title, propKeywords = [] }) => {
             defaultTitle: title
             defaultDescription: description
             author
-            siteUrl: siteUrl
+            siteUrl
             keywords
             twitterUsername
           }
@@ -23,7 +23,7 @@ const SEO = ({ description, lang, meta, title, propKeywords = [] }) => {
   const keywords =
     propKeywords.length > 0 ? propKeywords : site.siteMetadata.keywords;
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || site.siteMetadata.defaultDescription;
   const defaultTitle = site.siteMetadata?.title; // eslint-disable-line
 
   return (
@@ -82,10 +82,3 @@ SEO.defaultProps = {
 };
 
 export default SEO;
-
-// SEO.propTypes = {
-//   description: PropTypes.string,
-//   lang: PropTypes.string,
-//   meta: PropTypes.arrayOf(PropTypes.object),
-//   title: PropTypes.string.isRequired,
-// }
