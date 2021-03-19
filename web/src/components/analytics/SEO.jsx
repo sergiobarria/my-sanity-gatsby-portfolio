@@ -70,6 +70,10 @@ const SEO = ({ description, lang, meta, title, propKeywords = [] }) => {
           name: 'keywords',
           content: keywords.join(', '),
         },
+        {
+          name: 'robots',
+          content: 'index',
+        },
       ].concat(meta)}
     />
   );

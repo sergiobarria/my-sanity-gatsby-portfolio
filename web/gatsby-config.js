@@ -41,7 +41,6 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-robots-txt',
     `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-eslint',
@@ -66,20 +65,20 @@ module.exports = {
         dataset: process.env.GATSBY_SANITY_DATASET,
         useCdn: true, // false if you want to ensure fresh data
         // token: process.env.SANITY_READ_TOKEN,
-        watchMode: true,
+        // watchMode: true,
         // overlayDrafts: !isProd,
       },
     },
-    {
-      resolve: 'gatsby-plugin-sanity-image',
-      options: {
-        // Sanity project info (required)
-        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
-        dataset: process.env.GATSBY_SANITY_DATASET,
-        // fragmentTypeName: "SanityMainImage",
-        customImageTypes: ['mainImage'],
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-sanity-image',
+    //   options: {
+    //     // Sanity project info (required)
+    //     projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+    //     dataset: process.env.GATSBY_SANITY_DATASET,
+    //     // fragmentTypeName: "SanityMainImage",
+    //     customImageTypes: ['mainImage'],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -122,21 +121,6 @@ module.exports = {
           // respectDNT: true,
           // Avoids sending pageview hits from custom paths
           // exclude: ["/preview/**", "/do-not-track/me/too/"],
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://www.sergiobarria.com',
-        sitemap: 'https://www.sergiobarria.com/sitemap.xml',
-        env: {
-          development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-          },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }],
-          },
         },
       },
     },
