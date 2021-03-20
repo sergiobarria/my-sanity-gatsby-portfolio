@@ -14,7 +14,7 @@ module.exports = {
       gray: colors.trueGray,
       red: colors.red,
       yellow: colors.amber,
-      green: colors.emerald,
+      green: colors.green,
       lime: colors.lime,
       blue: colors.blue,
       indigo: colors.indigo,
@@ -57,6 +57,8 @@ module.exports = {
             p: {
               marginTop: '0',
               marginBottom: '0',
+              paddingTop: '0.75rem',
+              paddingBottom: '0.75rem',
             },
             h1: {
               marginBottom: '1rem',
@@ -69,8 +71,8 @@ module.exports = {
             code: {
               color: '#3B82F6',
               background: '#E5E5E5',
-              fontSize: '1rem',
-              fontWeight: '300',
+              fontSize: '1.25rem',
+              fontWeight: '600',
               padding: '0 0.4rem',
               borderRadius: '0.2rem',
               fontFamily: ['Monaco', 'Consolas', 'Courier New', 'monospace'],
