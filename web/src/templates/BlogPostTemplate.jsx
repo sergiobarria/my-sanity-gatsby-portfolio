@@ -5,8 +5,9 @@ import BlockContent from '@sanity/block-content-to-react';
 
 import Layout from '../components/layout/Layout';
 import Button from '../components/ui/Button';
-import serializers from '../queries/serializers';
+import Share from '../components/analytics/Share';
 import SEO from '../components/analytics/SEO';
+import serializers from '../queries/serializers';
 
 const BlogPostTemplate = ({ data }) => {
   const {
@@ -15,6 +16,7 @@ const BlogPostTemplate = ({ data }) => {
     categories,
     publishedAt,
     bodyContent,
+    slug,
     tags,
     keywords,
     authors,
@@ -25,6 +27,7 @@ const BlogPostTemplate = ({ data }) => {
     <>
       <SEO title={title} propKeywords={keywords} />
       <Layout>
+        <Share url={`www.sergiobarria.com/${slug.current}`} title={title} />
         <section className="container max-w-screen-md pb-10 mx-auto">
           <article className="p-4">
             <h1 className="pb-6 font-bold">{title}</h1>
@@ -87,6 +90,9 @@ export const query = graphql`
       title
       publishedAt(formatString: "MMMM DD, YYYY")
       tags
+      slug {
+        current
+      }
       keywords
       mainImage {
         asset {
