@@ -71,7 +71,7 @@ const BlogPostTemplate = ({ data }) => {
               )}
             </div>
 
-            <div className="py-6 prose">
+            <div className="py-6 prose max-w-none">
               <BlockContent blocks={bodyContent} serializers={serializers} />
             </div>
           </article>
