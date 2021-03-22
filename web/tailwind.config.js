@@ -57,6 +57,7 @@ module.exports = {
             p: {
               marginTop: '0',
               marginBottom: '0',
+              fontSize: '1.25rem',
               paddingTop: '0.75rem',
               paddingBottom: '0.75rem',
             },
