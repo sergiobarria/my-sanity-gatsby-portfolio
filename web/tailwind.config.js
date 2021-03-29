@@ -57,11 +57,19 @@ module.exports = {
             p: {
               marginTop: '0',
               marginBottom: '0',
-              fontSize: '1.25rem',
+              fontSize: '1rem',
               paddingTop: '0.75rem',
               paddingBottom: '0.75rem',
             },
             h1: {
+              marginBottom: '1rem',
+            },
+            h2: {
+              marginTop: '1rem',
+              marginBottom: '1rem',
+            },
+            h3: {
+              marginTop: '1rem',
               marginBottom: '1rem',
             },
             blockquote: {
