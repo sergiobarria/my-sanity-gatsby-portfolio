@@ -20,7 +20,7 @@ export default function Form() {
         <div className="inline-block animate-bounce">
           <span className="text-4xl animate-bounce">👇🏼</span>
         </div>
-        <form>
+        <form netlify>
           <input
             type="text"
             name="name"

@@ -7,7 +7,7 @@ import Layout from '../components/layout/Layout';
 import Button from '../components/ui/Button';
 import Share from '../components/analytics/Share';
 import SEO from '../components/analytics/SEO';
-import serializers from '../queries/serializers';
+import serializers from '../serializers/serializers';
 
 const BlogPostTemplate = ({ data }) => {
   const {

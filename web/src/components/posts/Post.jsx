@@ -33,7 +33,10 @@ export default function Post(props) {
         <div className="p-2 md:col-span-8">
           <h4 className="pb-2 font-semibold prose lg:prose-lg">{title}</h4>
           <hr />
-          <p className="py-2 prose">{excerpt[0].children[0].text}</p>
+          <p className="py-2 prose">
+            {excerpt[0].children[0].text}...
+            <span className="text-blue-600">read more</span>
+          </p>
           <p className="flex items-center py-0 pl-1 my-0 text-xs border-l-2 border-blue-600 lg:prose-sm">
             {publishedAt}{' '}
             <span className="text-2xl transform text-gradient my-gradient">

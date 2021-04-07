@@ -5,8 +5,9 @@ import Layout from '../components/layout/Layout';
 import Title from '../components/ui/Title';
 import PostsPreview from '../components/posts/PostPreview';
 import SEO from '../components/analytics/SEO';
+import Pagination from '../components/ui/Pagination';
 
-export default function Blog({ data }) {
+export default function Blog({ data, pageContext }) {
   const posts = data.allSanityPost.nodes.map(post => ({
     ...post,
   }));
@@ -17,6 +18,10 @@ export default function Blog({ data }) {
       <Layout>
         <section>
           <Title title="All Blog Posts" />
+          <Pagination
+            totalCount={data.allSanityPost.totalCount}
+            currentPage={pageContext.currentPage}
+          />
           <PostsPreview posts={posts} />
         </section>
       </Layout>
@@ -24,9 +29,14 @@ export default function Blog({ data }) {
   );
 }
 
-export const query = graphql`
-  query {
-    allSanityPost(sort: { order: DESC, fields: publishedAt }) {
+export const pageQuery = graphql`
+  query Test($skip: Int! = 0) {
+    allSanityPost(
+      sort: { order: DESC, fields: publishedAt }
+      limit: 10
+      skip: $skip
+    ) {
+      totalCount
       nodes {
         _id
         title
