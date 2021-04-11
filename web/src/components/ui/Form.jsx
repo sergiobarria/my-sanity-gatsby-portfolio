@@ -26,7 +26,7 @@ export default function Form() {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="form-name" value="Contact Form" />
+          <input type="hidden" name="form-name" value="contact" />
           <input
             type="text"
             name="name"
