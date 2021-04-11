@@ -28,11 +28,11 @@ export default function Navbar() {
     //   text: 'Resources',
     //   url: '/resources',
     // },
-    // {
-    //   id: 6,
-    //   text: 'Contact',
-    //   url: '/contact',
-    // },
+    {
+      id: 6,
+      text: 'Contact',
+      url: '/contact',
+    },
   ];
 
   const styles = {
