@@ -21,7 +21,7 @@ export default function Form() {
           <span className="text-4xl animate-bounce">👇🏼</span>
         </div>
         <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
+          {/* <input type="hidden" name="form-name" value="contact" /> */}
           <input
             type="text"
             name="name"
