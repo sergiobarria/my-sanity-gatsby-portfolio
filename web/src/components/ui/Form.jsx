@@ -22,21 +22,21 @@ export default function Form() {
         </div>
         <form
           name="contact"
-          method="post"
-          netlify-honeypot="bot-field"
+          method="POST"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
         >
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="Your name"
             required
             className="w-full p-2 mb-2 border rounded-md"
           />
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Your email"
             required
             className="w-full p-2 mb-2 border rounded-md"
           />
